@@ -23,15 +23,14 @@ class VirtualAnchorSelector {
 
             // to prevent VAs
             val xMin = xCoords.min()!! - 0.00001
-            val yMin = xCoords.min()!! - 0.00001
+            val yMin = yCoords.min()!! - 0.00001
             val xMax = xCoords.max()!! + 0.00001
-            val yMax = xCoords.max()!! + 0.00001
+            val yMax = yCoords.max()!! + 0.00001
 
             val xGridLen = (xMax - xMin) / _k
             val yGridLen = (yMax - yMin) / _k
 
             val grid = Array(k) { mutableListOf<VirtualAnchor>() }
-
             vas.map {
                 val _x = it.position.x - xMin
                 val _y = it.position.y - yMin

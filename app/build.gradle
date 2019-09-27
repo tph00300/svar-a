@@ -38,4 +38,10 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     implementation group: 'com.jcraft', name: 'jsch', version: '0.1.44-1'
+
+    implementation 'de.siegmar:fastcsv:1.0.3'
+
+    // E.J.M.L(Effective Java Matrix Library
+    implementation group: 'org.ejml', name: 'ejml-all', version: '0.37.1'
+    
 }
