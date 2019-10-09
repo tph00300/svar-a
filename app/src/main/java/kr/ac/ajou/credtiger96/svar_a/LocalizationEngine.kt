@@ -9,7 +9,8 @@ class LocalizationEngine {
         }
 
         fun processRandom(vas : List<VirtualAnchor>, k : Int): Vector3 {
-            return process(vas.shuffled().subList(0, k))
+            return if (vas.size < k) process(vas)
+                else process(vas.shuffled().subList(0, k))
         }
 
         fun processRaw(vas : List<VirtualAnchor>): Vector3 {
